@@ -1,5 +1,5 @@
 console.log('browse controller')
 
-app.controller('BrowseCtrl', function($scope){
+app.controller('BrowseCtrl', function() {
 
 })
