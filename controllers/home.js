@@ -1,5 +1,5 @@
 console.log('home controller')
 
-app.controller('HomeCtrl', function(){
+app.controller('HomeCtrl', function() {
 
 })
