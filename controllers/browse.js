@@ -11,7 +11,7 @@ app.controller('BrowseCtrl', function($http, $scope) {
         $scope.getBookTitle = response.data.items[0].volumeInfo.title
         $scope.getBookImg = response.data.items[0].volumeInfo.imageLinks.thumbnail
         $scope.getBookDes = response.data.items[0].volumeInfo.description
-        $scope.getBookAuthor = response.data.items[0].volumeInfo.authors
+        $scope.getBookAuthor = response.data.items[0].volumeInfo.authors[0]
      })
     }
   })
