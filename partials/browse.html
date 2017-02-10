@@ -1,14 +1,14 @@
-<!-- <div mg-class="newBook()" style="width: 20rem;">
-  <img class="card-img-top" src="" alt="Book Cover Here">
+<div mg-class="newBook()" style="width: 20rem;">
+  <img class="card-img-top" src="{{getBookImg}}" alt="Book Cover Here">
   <div class="card-block">
-    <h4 class="card-title">Book Title</h4>
+    <h4 class="card-title">{{getBookTitle}}</h4>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#/profile" class="btn btn-primary">Add Book</a>
   </div>
-</div> -->
+</div>
 
-<h1>{{getBooks}}</h1>
+
 <form ng-submit="getBooks()">
-  <input ng-model="title" type="text" placeholder="title">
+  <input ng-model="title" ng-model="thumbnail" type="text" placeholder="title">
   <input type="submit" class="btn btn-primary" value="Get Books">
 </form>
