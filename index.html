@@ -31,9 +31,9 @@
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="title, author, genre">
+          <input ng-model="searchBooks" type="text" class="form-control" placeholder="book title">
         </div>
-        <button type="button" class="btn btn-link"><a href="#/browse">Search Books</a></button>
+        <button ng-click="findBooks(searchBooks)" type="button" class="btn btn-link"><a href="#/browse">Search Books</a></button>
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
