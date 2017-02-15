@@ -19,5 +19,17 @@ app.controller('ProfileCtrl', function($scope, $http){
         $scope.newBookPost()
         console.log(response)
      })
-    }
+   }
+   $scope.addReview = (key, review) => {
+    console.log('hey')
+    const bookReviews =  {
+        "review" : review
+   }
+    $http.patch(`https://front-end-capstone-290ae.firebaseio.com/${key}/.json`, bookReviews)
+     .then(function(response) {
+        $scope.newBookPost()
+     })
+    review = '';
+    console.log('asdfsafsa', $scope)
+   }
 })
