@@ -1,9 +1,9 @@
 <h3>Register</h3>
 
-<div class="container">
+<div ng-submit="register(email, password)" class="container">
 <form class="simple-form">
-  <label>E-mail <input type="email"></label>
-  <label>Password <input type="password"></label>
+  <label>E-mail <input ng-model="email" type="email"></label>
+  <label>Password <input ng-model="password" type="password"></label>
   <button>Register</button>
 </form>
 </div>
