@@ -1,13 +1,18 @@
-<div ng-model="newBookCard" ng-repeat="(key , newBook) in data" mg-class="newBook()" style="width: 20rem;">
+<div ng-repeat="(key , newBook) in data" mg-class="newBook()" style="width: 20rem;">
   <img class="card-img-top" ng-src="{{newBook.volumeInfo.imageLinks.thumbnail}}" alt="Book Cover Here">
   <div class="card-block">
     <h4 class="card-title">{{newBook.volumeInfo.title}} by
     </h4>
     <span ng-repeat="author in newBook.volumeInfo.authors"><h4>{{author}}</h4></span>
     <p class="card-text">{{newBook.volumeInfo.description}}</p>
-    <input type="textarea">
-    <button class="btn btn-primary">Add Review</button>
+    <input class="reviewInput" type="textarea" ng-model="reviewText">
+    <button class="add-btn" ng-click="addReview(key, reviewText); reviewText='' ">Add Review</button>
     <a md-button ng-click="deleteBook(key)" href="#/profile" class="btn btn-primary">Delete Book</a>
+    <!-- <p>{{reviewText}}</p> -->
+
+
+
+    <p>{{newBook.review}}</p>
     </div>
   </div>
 </div>
