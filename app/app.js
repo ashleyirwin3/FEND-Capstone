@@ -2,8 +2,9 @@ console.log('testing')
 
 const app = angular.module('bookShelf', ['ngRoute'])
 
-  function findBooks(books) {
-     $http.get(`https://www.googleapis.com/books/v1/volumes?q=${title}&key=AIzaSyByuWvTo_uYeZIdTq3NTknCjoi3yjQVkAE`)
-      .then(function(response) {
-  })
-}
+  firebase.initializeApp({
+    apiKey: "AIzaSyAEPrn1hldLdGdXw0XtcaIuV5kwCHNIgIY",
+    authDomain: "front-end-capstone-290ae.firebaseapp.com",
+    databaseURL: "https://front-end-capstone-290ae.firebaseio.com",
+    storageBucket: "front-end-capstone-290ae.appspot.com",
+    messagingSenderId: "291283786407"});
