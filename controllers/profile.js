@@ -22,6 +22,7 @@ app.controller('ProfileCtrl', function($scope, $http){
    }
    $scope.addReview = (key, review) => {
     console.log('hey')
+
     const bookReviews =  {
         "review" : review
    }
