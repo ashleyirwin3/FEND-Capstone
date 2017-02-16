@@ -5,14 +5,15 @@
     </h4>
     <span ng-repeat="author in newBook.volumeInfo.authors"><h4>{{author}}</h4></span>
     <p class="card-text">{{newBook.volumeInfo.description}}</p>
-    <input class="reviewInput" type="textarea" ng-model="reviewText">
-    <button class="add-btn" ng-click="addReview(key, reviewText); reviewText='' ">Add Review</button>
+    <input class="reviewInput" type="textarea" ng-model="review">
+    <button class="add-btn" ng-click="addReview(key, review); review= '' ">Add Review</button>
+    <button class="add-btn" ng-click="addReview(key, review); review= ''">Edit Review</button>
     <a md-button ng-click="deleteBook(key)" href="#/profile" class="btn btn-primary">Delete Book</a>
-    <!-- <p>{{reviewText}}</p> -->
+    <p>{{review}}</p>
 
 
 
-    <p>{{newBook.review}}</p>
+    <p ng-show="review === ''">{{newBook.review}}</p>
     </div>
   </div>
 </div>
