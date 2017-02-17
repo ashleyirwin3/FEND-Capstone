@@ -26,20 +26,13 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#/login">Login</li></a>
-        <li><a href="#/register">Sign Up</a></li>
+        <li><a href="#/profile">My Books</a></li>
+        <li> <a href="#/browse">Browse Books</a></li>
       </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="title, author, genre">
-        </div>
-        <button type="button" class="btn btn-link"><a href="#/browse">Search Books</a></button>
-      </form>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#/">Logout</a></li>
+           <li><a href="#/login">Login</li></a>
+           <li><a href="#/register">Sign Up</a></li>
+           <li><a href="#/">Logout</a></li>
           </ul>
         </li>
       </ul>
@@ -49,6 +42,9 @@
 </div>
 
 <div ng-view></div>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+
 
 <!-- dependency script tags -->
 
@@ -68,5 +64,6 @@
 <script src="/controllers/login.js"></script>
 <script src="/controllers/profile.js"></script>
 <script src="/controllers/register.js"></script>
+
 </body>
 </html>

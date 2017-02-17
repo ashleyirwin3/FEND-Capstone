@@ -1,7 +1,10 @@
 <h3>Login</h3>
 
-<form class="simple-form">
-  <label>E-mail <input type="email"></label>
-  <label>Password <input type="password"></label>
+<form ng-submit="login(email, password)" class="simple-form">
+  <label>E-mail <input ng-model="email" type="email"></label>
+  <label>Password <input ng-model="password" type="password"></label>
   <button>Submit</button>
 </form>
+
+
+<button ng-click="logout()">Logout</button>

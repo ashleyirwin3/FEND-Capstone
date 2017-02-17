@@ -1,14 +1,16 @@
-<!-- <div mg-class="newBook()" style="width: 20rem;">
-  <img class="card-img-top" src="" alt="Book Cover Here">
+<div ng-model="newBookCard" ng-repeat="newBook in data" mg-class="newBook()" style="width: 20rem;">
+  <img class="card-img-top" ng-src="{{newBook.volumeInfo.imageLinks.thumbnail}}" alt="Book Cover Here">
   <div class="card-block">
-    <h4 class="card-title">Book Title</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#/profile" class="btn btn-primary">Add Book</a>
+    <h4 class="card-title">{{newBook.volumeInfo.title}} by
+    </h4>
+    <span ng-repeat="author in newBook.volumeInfo.authors"><h4>{{author}}</h4></span>
+    <p class="card-text">{{newBook.volumeInfo.description}}</p>
+    <a md-button ng-click="addBooks(newBook)" href="#/profile" class="btn btn-primary">Add Book</a>
+    </div>
   </div>
-</div> -->
+</div>
 
-<h1>{{getBooks}}</h1>
-<form ng-submit="getBooks()">
-  <input ng-model="title" type="text" placeholder="title">
-  <input type="submit" class="btn btn-primary" value="Get Books">
+<form class="searchBtn" ng-submit="getBooks()">
+  <input ng-model="title" ng-model="thumbnail" type="text" placeholder="title">
+  <input type="submit" class="btn btn-primary" value="Search">
 </form>
