@@ -1,3 +1,14 @@
 body {
   background-color: lightgrey;
 }
+
+.bookCard {
+  padding-left: 2em;
+  width: 45%;
+  display: inline-block;
+}
+
+/*.card-text {
+  max-height: 15em;
+}
+*/
