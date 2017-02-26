@@ -12,3 +12,9 @@ body {
   max-height: 15em;
 }
 */
+
+.browseCard {
+  padding-left: 2em;
+  width: 45%;
+  display: inline-block;
+}
