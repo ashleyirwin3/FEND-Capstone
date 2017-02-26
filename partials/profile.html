@@ -4,7 +4,12 @@
     <h4 class="card-title">{{newBook.volumeInfo.title}} by
     </h4>
     <span ng-repeat="author in newBook.volumeInfo.authors"><h4>{{author}}</h4></span>
-    <p class="card-text">{{newBook.volumeInfo.description}}</p>
+   <!--  <p class="card-text">{{newBook.volumeInfo.description}}</p> -->
+   <button type="button" ng-click="loadDes(newBook.volumeInfo.description)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Description
+   </button>
+
+<!-- /.Live preview-->
     <input class="reviewInput" type="textarea" ng-model="review">
     <button class="add-btn" ng-click="addReview(key, review); review= '' ">Add Review</button>
     <button class="add-btn" ng-click="addReview(key, review); review= ''">Edit Review</button>
@@ -13,3 +18,29 @@
     <p ng-show="review === ''">{{newBook.review}}</p>
   </div>
 </div>
+
+
+<!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+        <!--Content-->
+              <div class="modal-content">
+            <!--Header-->
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                      <h4 class="modal-title w-100" id="myModalLabel">Description</h4>
+                  </div>
+            <!--Body-->
+                  <div class="modal-body">
+                  {{description}}
+                  </div>
+            <!--Footer-->
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+        <!--/.Content-->
+          </div>
+      </div>
