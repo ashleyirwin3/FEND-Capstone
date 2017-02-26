@@ -33,4 +33,10 @@ app.controller('ProfileCtrl', function($scope, $http){
     review = '';
     console.log('asdfsafsa', $scope)
    }
+       // populate modal
+    $scope.loadDes = (description) => {
+      console.log("description", description)
+      $scope.description = description
+
+    }
 })
