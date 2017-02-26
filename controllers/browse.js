@@ -3,9 +3,9 @@ console.log('browse controller')
 
 
 app.controller('BrowseCtrl', function($http, $scope) {
-  $scope.getBooks = (title)=> {
-        console.log('hey')
-    $http.get(`https://www.googleapis.com/books/v1/volumes?q=${$scope.title}&key=AIzaSyByuWvTo_uYeZIdTq3NTknCjoi3yjQVkAE`)
+  $scope.getBooks = ()=> {
+    console.log('hey', $scope.title)
+    $http.get(`https://www.googleapis.com/books/v1/volumes?q=${$scope.title}&key=AIzaSyCmHJVb8WKdom8Jgct9MqQe7cbPliDujwk`)
     .then(function(response) {
         console.log(response.data)
         $scope.data = response.data.items
@@ -20,5 +20,11 @@ app.controller('BrowseCtrl', function($http, $scope) {
         $scope.data = response.data.items
         console.log($scope.data)
      })
+    }
+    // populate modal
+    $scope.loadDes = (description) => {
+      console.log("description", description)
+      $scope.description = description
+
     }
   })
