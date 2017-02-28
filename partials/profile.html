@@ -1,24 +1,46 @@
-<div class="bookCard" ng-repeat="(key , newBook) in data" style="width: 20rem;">
-  <img class="card-img-top" ng-src="{{newBook.volumeInfo.imageLinks.thumbnail}}" alt="Book Cover Here">
-  <div class="card-block">
-    <h4 class="card-title">{{newBook.volumeInfo.title}} by
-    </h4>
-    <span ng-repeat="author in newBook.volumeInfo.authors"><h4>{{author}}</h4></span>
-   <!--  <p class="card-text">{{newBook.volumeInfo.description}}</p> -->
-   <button type="button" ng-click="loadDes(newBook.volumeInfo.description)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Description
-   </button>
+<div class="container">
+  <div class="row">
+<!-- <div class="col-md-4"> -->
 
-<!-- /.Live preview-->
-    <input class="reviewInput" type="textarea" ng-model="review">
-    <button class="add-btn" ng-click="addReview(key, review); review= '' ">Add Review</button>
-    <button class="add-btn" ng-click="addReview(key, review); review= ''">Edit Review</button>
-    <a md-button ng-click="deleteBook(key)" href="#/profile" class="btn btn-primary">Delete Book</a>
-    <p>{{review}}</p>
-    <p ng-show="review === ''">{{newBook.review}}</p>
+    <!--Card-->
+    <div class="card card-cascade bookCard col-sm-4" ng-repeat="(key , newBook) in data">
+
+        <!--Card content-->
+        <div class="card-block text-center">
+            <!--Title-->
+            <h4 class="card-title"><strong>{{newBook.volumeInfo.title}}</strong></h4>
+            <h5><span ng-repeat="author in newBook.volumeInfo.authors"><h4>{{author}}</h4></span></h5>
+
+             <a type="button" id="descBtn" class="btn-floating btn-small btn-" ng-click="loadDes(newBook.volumeInfo.description)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-book fa-lg"></i></a>
+
+              <!--Card image-->
+        <div class="view overlay hm-white-slight">
+            <img id="bookImg" ng-src="{{newBook.volumeInfo.imageLinks.thumbnail}}" class="img-fluid" alt="">
+            <a>
+                <div class="mask waves-effect waves-light"></div>
+            </a>
+        </div>
+        <!--/.Card image-->
+
+
+
+            <input id="{{key}}" class="reviewInput hidden" type="textarea" ng-model="review">
+
+            <p>{{newBook.myReview}}</p>
+            <!--Add review-->
+            <a type="button" id="revBtn" class="btn-floating btn-small btn-fb" ng-if="newBook.myReview === '' " ng-click="addReview(key, review); "><i class="fa fa-plus"></i>Add Review</a>
+            <!--Edit review-->
+            <a type="button" id="editBtn" class="btn-floating btn-small btn-tw" ng-if="newBook.myReview !== '' " ng-click="addReview(key, review)"><i class="fa fa-pencil fa-lg"></i></a>
+            <!--Delete book +-->
+            <a type="button" id="trashBtn" class="btn-floating btn-small btn-gplus" ng-click="deleteBook(key)"><i class="fa fa-trash fa-lg"></i></a>
+
+        </div>
+        <!--/.Card content-->
+
+      </div>
+    <!--/.Card-->
+    </div>
   </div>
-</div>
-
 
 <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -42,5 +64,6 @@
                   </div>
               </div>
         <!--/.Content-->
+           </section>
           </div>
       </div>

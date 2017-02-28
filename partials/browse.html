@@ -1,30 +1,49 @@
-<div class="browseCard" ng-model="newBookCard" ng-repeat="newBook in data" mg-class="newBook()" style="width: 20rem;">
-  <img class="card-img-top" ng-src="{{newBook.volumeInfo.imageLinks.thumbnail}}" alt="Book Cover Here">
-  <div class="card-block">
-    <h4 class="card-title">{{newBook.volumeInfo.title}} by
-    </h4>
-    <span ng-repeat="author in newBook.volumeInfo.authors"><h4>{{author}}</h4></span>
-  <!--   <p class="card-text">{{newBook.volumeInfo.description}}</p> -->
-     <button type="button" ng-click="loadDes(newBook.volumeInfo.description)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Description
-   </button>
-
-
-<!-- /.Live preview-->
-    <a md-button ng-click="addBooks(newBook)" href="#/profile" class="btn btn-primary">Add Book</a>
-    </div>
-  </div>
-</div>
-
-<form class="searchBtn" ng-submit="getBooks()">
+<form id="browseIng" class="searchBtn" ng-submit="getBooks()">
   <input ng-model="title" ng-model="thumbnail" type="text" placeholder="title">
-  <input type="submit" class="btn btn-primary" value="Search">
+  <input id="browseBtn" type="submit" class="btn" value="Search">
 </form>
 
 
 
 
 
+<div class="container">
+  <div class="row">
+ <!--    <div class="col-md-4"> -->
+
+    <!--Card-->
+    <div class="card card-cascade browseCard col-sm-4" ng-repeat="(key , newBook) in data">
+
+        <!--Card content-->
+        <div class="card-block text-center">
+            <!--Title-->
+            <h4 class="card-title"><strong>{{newBook.volumeInfo.title}}</strong></h4>
+            <h5><span ng-repeat="author in newBook.volumeInfo.authors"><h4>{{author}}</h4></span></h5>
+               <a type="button" id="desBtn" class="btn-floating btn-small btn-" ng-click="loadDes(newBook.volumeInfo.description)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-book fa-lg"></i></a>
+
+              <!--Card image-->
+        <div class="view overlay hm-white-slight">
+            <img id="browseBookImg" ng-src="{{newBook.volumeInfo.imageLinks.thumbnail}}" class="img-fluid" alt="">
+            <a>
+                <div class="mask waves-effect waves-light"></div>
+            </a>
+        </div>
+        <!--/.Card image-->
+
+          <a type="button" id="browseAddBtn" class="btn-floating btn-small btn-fb" ng-click="addBooks(newBook) "><i class="fa fa-plus fa-lg"></i>Add Book</a>
+
+
+
+
+
+
+        </div>
+        <!--/.Card content-->
+
+    </div>
+    <!--/.Card-->
+
+</div>
 
 <!-- Modal -->
       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -49,4 +68,6 @@
               </div>
         <!--/.Content-->
           </div>
+      </div>
+      </div>
       </div>
