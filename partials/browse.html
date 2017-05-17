@@ -1,7 +1,7 @@
 
 
 <form id="browseIng" class="searchBtn" ng-submit="getBooks()">
-  <input ng-model="title" ng-model="thumbnail" type="text" placeholder="title">
+  <input ng-model="title" ng-model="thumbnail" type="text" placeholder="enter a book title">
   <input id="browseBtn" type="submit" class="btn" value="Search">
 </form>
 
@@ -11,28 +11,22 @@
 
 <div class="container">
   <div class="row">
- <!--    <div class="col-md-4"> -->
-
-    <!--Card-->
     <div class="card card-cascade browseCard col-sm-4" ng-repeat="(key , newBook) in data">
-
-        <!--Card content-->
         <div class="card-block text-center">
-            <!--Title-->
             <h4 class="card-title"><strong>{{newBook.volumeInfo.title}}</strong></h4>
-            <h5><span ng-repeat="author in newBook.volumeInfo.authors"><h4>{{author}}</h4></span></h5>
+            <h6><span ng-repeat="author in newBook.volumeInfo.authors"><h6>{{author}}</h6></span></h6>
                <a type="button" id="desBtn" class="btn-floating btn-small btn-" ng-click="loadDes(newBook.volumeInfo.description)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-book fa-lg"></i></a>
 
-              <!--Card image-->
+
         <div class="view overlay hm-white-slight">
             <img id="browseBookImg" ng-src="{{newBook.volumeInfo.imageLinks.thumbnail}}" class="img-fluid" alt="">
             <a>
                 <div class="mask waves-effect waves-light"></div>
             </a>
         </div>
-        <!--/.Card image-->
 
-          <a type="button" id="browseAddBtn" class="btn-floating btn-small btn-fb" ng-click="addBooks(newBook) "><i class="fa fa-plus fa-lg"></i>Add Book</a>
+
+          <a type="button" id="browseAddBtn" class="btn-floating btn-small btn-fb" ng-click="addBooks(newBook)"></i>I've Read This</a>
 
 
 
@@ -63,12 +57,12 @@
                   <div class="modal-body">
                   {{description}}
                   </div>
-            <!--Footer-->
+
                   <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                   </div>
               </div>
-        <!--/.Content-->
+
           </div>
       </div>
       </div>
