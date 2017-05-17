@@ -4,19 +4,27 @@ body {
 
 .bookCard {
   padding-left: 2em;
+  border-style: solid;
   display: inline-block;
   height: 345px;
+  font-size: .8rem;
   overflow: scroll;
 
 }
 
-/*.card-text {
-  max-height: 15em;
+.card-title {
+  font-size: .8rem;
 }
-*/
+
+.card-author {
+  font-size: .8rem;
+}
+
+
 
 .browseCard {
-  padding-left: 2em;
+  padding-left: 5em;
+  padding-right: 5em;
   display: inline-block;
   height: 345px;
   overflow: scroll;
@@ -35,12 +43,6 @@ body {
   color: grey;
 }
 
-#revBtn {
-  color: teal;
-  display: inline-block;
-  padding-right: none;
-}
-
 #editBtn {
   color: teal;
 }
@@ -50,11 +52,14 @@ body {
 }
 
 #browseAddBtn {
+  padding-top: 5em;
   color: teal;
+  font-size: .8rem;
 }
 
 #browseBookImg {
-  height: 200px;
+  height: 200px !important;
+  display: center !important;
 }
 
 .searchBtn {
