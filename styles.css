@@ -1,17 +1,22 @@
 body {
-  background-color: white;
+  background-color: lightgrey;
 }
 
 .bookCard {
   padding-left: 2em;
-  border-style: solid;
+  border: solid;
+  border-color: #ffefd5;
   display: inline-block;
-  height: 345px;
+  height: 300px;
   font-size: .8rem;
+  background-color: #f5f5dc;
   overflow: scroll;
 
 }
 
+/*#navBar {
+  background-color: #d8bfdb;
+}*/
 .card-title {
   font-size: .8rem;
 }
@@ -25,13 +30,16 @@ body {
 .browseCard {
   padding-left: 5em;
   padding-right: 5em;
+  border: solid;
+  border-color: #ffefd5;
   display: inline-block;
   height: 345px;
   overflow: scroll;
+  background-color: #f5f5dc;
 }
 
 #desBtn {
-  color: teal;
+  color: black;
 }
 
 #bookImg {
@@ -40,7 +48,7 @@ body {
 }
 
 #trashBtn {
-  color: grey;
+  color: black;
 }
 
 #editBtn {
@@ -48,12 +56,12 @@ body {
 }
 
 #descBtn {
-  color: teal;
+  color: black;
 }
 
 #browseAddBtn {
   padding-top: 5em;
-  color: teal;
+  color: black;
   font-size: .8rem;
 }
 
