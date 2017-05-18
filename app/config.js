@@ -9,10 +9,6 @@ app.config(function ($routeProvider, $locationProvider) {
     controller: 'BrowseCtrl',
     templateUrl: '/partials/browse.html',
   })
-  .when('/groups', {
-    controller: 'GroupsCtrl',
-    templateUrl: '/partials/groups.html',
-  })
   .when('/login', {
     controller: 'LoginCtrl',
     templateUrl: '/partials/login.html',
