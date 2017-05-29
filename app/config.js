@@ -9,17 +9,9 @@ app.config(function ($routeProvider, $locationProvider) {
     controller: 'BrowseCtrl',
     templateUrl: '/partials/browse.html',
   })
-  .when('/login', {
-    controller: 'LoginCtrl',
-    templateUrl: '/partials/login.html',
-  })
   .when('/profile', {
     controller: 'ProfileCtrl',
     templateUrl: '/partials/profile.html',
-  })
-  .when('/register', {
-    controller: 'RegisterCtrl',
-    templateUrl: '/partials/register.html',
   })
   .otherwise({
     redirectTo: ('/')
