@@ -9,7 +9,7 @@
         <div class="card-block text-center">
             <!--Title-->
             <h4 class="card-title"><strong>{{newBook.volumeInfo.title}}</strong></h4>
-            <h5><span ng-repeat="author in newBook.volumeInfo.authors"><h4>{{author}}</h4></span></h5>
+            <h6><span ng-repeat="author in newBook.volumeInfo.authors"><h6>{{author}}</h6></span></h6>
 
              <a type="button" id="descBtn" class="btn-floating btn-small btn-" ng-click="loadDes(newBook.volumeInfo.description)" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-book fa-lg"></i></a>
 
@@ -32,7 +32,7 @@
             <!--Edit review-->
 <!--             <a type="button" id="editBtn" class="btn-floating btn-small btn-tw" ng-if="newBook.myReview !== '' " ng-click="addReview(key, review)"><i class="fa fa-pencil fa-lg"></i></a> -->
             <!--Delete book +-->
-            <a type="button" id="trashBtn" class="btn-floating btn-small btn-gplus" ng-click="deleteBook(key)"><i class="fa fa-trash fa-lg"></i></a>
+            <a type="button" id="trashBtn" class="btn-floating btn-small btn-gplus" ng-click="deleteBook(key)">Delete This Book</a>
 
         </div>
         <!--/.Card content-->

@@ -1,29 +1,45 @@
 body {
-  background-color: white;
+  background-color: lightgrey;
 }
 
 .bookCard {
   padding-left: 2em;
+  border: solid;
+  border-color: #ffefd5;
   display: inline-block;
-  height: 345px;
+  height: 300px;
+  font-size: .8rem;
+  background-color: #f5f5dc;
   overflow: scroll;
 
 }
 
-/*.card-text {
-  max-height: 15em;
+/*#navBar {
+  background-color: #d8bfdb;
+}*/
+.card-title {
+  font-size: .8rem;
 }
-*/
+
+.card-author {
+  font-size: .8rem;
+}
+
+
 
 .browseCard {
-  padding-left: 2em;
+  padding-left: 5em;
+  padding-right: 5em;
+  border: solid;
+  border-color: #ffefd5;
   display: inline-block;
   height: 345px;
   overflow: scroll;
+  background-color: #f5f5dc;
 }
 
 #desBtn {
-  color: teal;
+  color: black;
 }
 
 #bookImg {
@@ -32,13 +48,7 @@ body {
 }
 
 #trashBtn {
-  color: grey;
-}
-
-#revBtn {
-  color: teal;
-  display: inline-block;
-  padding-right: none;
+  color: black;
 }
 
 #editBtn {
@@ -46,15 +56,18 @@ body {
 }
 
 #descBtn {
-  color: teal;
+  color: black;
 }
 
 #browseAddBtn {
-  color: teal;
+  padding-top: 5em;
+  color: black;
+  font-size: .8rem;
 }
 
 #browseBookImg {
-  height: 200px;
+  height: 200px !important;
+  display: center !important;
 }
 
 .searchBtn {
