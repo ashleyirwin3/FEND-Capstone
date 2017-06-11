@@ -26,7 +26,7 @@ Users can view a brief description of each book by clicking on the book icon abo
 
 A simple call to the API brings a short description to a modal.
 
-<img src="img/bookshelf.jpg" width="500px">
+<img src="img/bookshelf5.jpg" width="500px">
 The book is then added to the user's profile.
 
 Firebase is updated when user's add a book, and then they are taken to their profile view of all of their added books.
