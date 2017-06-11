@@ -4,29 +4,29 @@ Bookshelf is an AngularJS application that allows users to browse through thousa
 After I graduated college, I stopped reading almost altogether. I wanted an app that would allow me to easily browse through books and make a list of the ones I’ve read, creating a visual representation of my progress. Bookshelf was the perfect solution.
 
 ## About
-<img src="img/bookshelf1" width="600px">
+<img src="img/bookshelf1" width="300px">
 Bookshelf is built in the AngularJS framework and uses the Google Books API to provide results for book searches. Firebase acts as the real-time database for the application.
 
 ## Tech Stack
 AngularJS, Firebase, Bootstrap, HTML5, CSS
 
 ## App
-<img src="img/bookshelf2" width="600px">
+<img src="img/bookshelf2" width="300px">
 Users can search for any title they can think of...
 
 Using the Google Books API, millions of titles are available.
 
-<img src="img/bookshelf3" width="600px">
+<img src="img/bookshelf3" width="300px">
 Users then see 10 books that best match their search.
 
 The first 10 books available that match the API specifications populate the page.
 
-<img src="img/bookshelf4" width="600px">
+<img src="img/bookshelf4" width="300px">
 Users can view a brief description of each book by clicking on the book icon above the book cover.
 
 A simple call to the API brings a short description to a modal.
 
-<img src="img/bookshelf4" width="600px">
+<img src="img/bookshelf4" width="300px">
 The book is then added to the user's profile.
 
 Firebase is updated when user's add a book, and then they are taken to their profile view of all of their added books.
